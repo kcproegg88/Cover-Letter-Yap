@@ -1,2 +1,2 @@
 # Coverletter-Yap
-Remixes premade text, while also inputting certian text in [tag]
+Remixes premade text, while replacing flagged words with designated values
