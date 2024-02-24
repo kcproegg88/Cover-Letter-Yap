@@ -17,7 +17,7 @@ def combine(sections, main_folder, output, flag, keywords):
 def read(filename, flag, keywords):
     with open(filename, 'r') as file:
         file_contents = key_words(file.read(), flag, keywords)
-        print(file_contents, "\n")
+        print(file_contents, "\n")  # Uncomment this line to get a print of what's happening
         return file_contents
 
 
@@ -27,8 +27,10 @@ def key_words(content, flag, keywords):
         if word[0] == flag:
             if word[1:] in list(keywords.keys()):
                 word = keywords[word[1:]]
-            elif word[1:-1] in list(keywords.keys()):  # this one is for potential punctuation
+            elif word[1:-1] in list(keywords.keys()):  # this one is for potential punctuation (1 symbol)
                 word = keywords[word[1:-1]] + word[-1]
+            elif word[1:-2] in list(keywords.keys()):  # this one is for potential punctuation (2 symbols)
+                word = keywords[word[1:-2]] + word[-2:]
         edited_content.append(word)
     return ' '.join(edited_content)
 
