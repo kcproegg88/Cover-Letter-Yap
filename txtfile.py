@@ -38,7 +38,7 @@ def key_words(content, flag, keywords):
 def append(filename, new_contents):
     with open(filename, 'a') as file:
         file.write(new_contents)
-        file.write("\n")
+        file.write("\n\n")
 
 
 def clear(filename):
