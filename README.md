@@ -5,7 +5,13 @@ Remixes premade text while replacing flagged words with designated values
 - Make a generic cover letter and replace flagged words with names/words of your choice
 - Give variety in paragraphs
 
-# Simplest Way to Sub-Values
+# How to use
+After Install Python and this repository:
+- Edit Flag string and Key dictionary in main.py file to desired values
+- Edit the text inside of each of the paragraph folders inside of user_name
+- Run code, and enjoy the output on output.txt
+
+# Simplest Way to Sub-Values (Avoids Remixes)
 - Set paragraphs variable to 0
 - Choose your key and flag it appropriately
 - Inside the introduction folder, keep only 1.txt and paste everything inside
