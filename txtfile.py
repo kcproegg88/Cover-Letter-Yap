@@ -24,6 +24,7 @@ def read(filename, flag, keywords):
 def key_words(content, flag, keywords):
     edited_content = []
     for word in content.split():
+
         if word[0] == flag:
             if word[1:] in list(keywords.keys()):
                 word = keywords[word[1:]]
