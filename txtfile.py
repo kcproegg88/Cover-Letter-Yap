@@ -1,6 +1,22 @@
 import os
 import random
+from datetime import datetime
 
+
+def init_main_dir(main_dir="user_name"):
+    try:
+        os.mkdir(main_dir)
+        print(f"Folder '{main_dir}' created successfully at {datetime.now}.")
+        return 1
+    except FileExistsError:
+        print(f"Folder '{main_dir}' exists already.\n")
+        return 1
+    except OSError as e:
+        print(f"Error occurred while creating folder '{main_dir}'.\n")
+        return 0
+
+def init_sub_dir(sub_dir, main_dir="user_name"):
+    
 
 def combine(sections, main_folder, output, flag, keywords):
     for folder in sections:

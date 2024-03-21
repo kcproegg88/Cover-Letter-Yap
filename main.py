@@ -1,4 +1,5 @@
 import txtfile
+import folder
 
 main_folder = "user_name"
 #  add all paragraph folders to this folder
