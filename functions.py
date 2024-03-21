@@ -12,7 +12,7 @@ def init_setup(main_dir="user_name", number_of_paragraphs=3):
     while working:
         working = create_sub_dir(sub_dirs[paragraphs], main_dir)
         for i in range(3):
-            create_file(f"{i+1}.txt", sub_dirs[paragraphs], main_dir) git
+            create_file(f"{i+1}.txt", sub_dirs[paragraphs], main_dir)
         paragraphs += 1
         if paragraphs > number_of_paragraphs + 1:
             print(f"Setup Successful, Introduction, Conclusion and {number_of_paragraphs} paragraphs created.\n")
