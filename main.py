@@ -11,7 +11,7 @@ num_paragraphs = 3
 flag = "["
 #  edit the flag which calls for the replacement
 
-keywords = {"name]": "John Simmons",
+keywords = {"name]": "Ben Simmons",
             "phone]": "1-800-525-0102",
             "email]": "NPIC@state.gov",
             "company]": "US Department of Defense",
