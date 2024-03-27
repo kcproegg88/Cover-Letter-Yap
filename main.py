@@ -1,16 +1,17 @@
-import txtfile
-import folder
+import cldb
 
-main_folder = "user_name"
+main_dir = "your_name"
 #  add all paragraph folders to this folder
 
-num_paragraphs = 2
+output_file = "cover_letter.txt"
+
+num_paragraphs = 3
 #  edit num_paragraphs depending on number of paragraphs in between intro and conclusion
 
 flag = "["
 #  edit the flag which calls for the replacement
 
-keywords = {"name]": "Ben Simmons",
+keywords = {"name]": "John Simmons",
             "phone]": "1-800-525-0102",
             "email]": "NPIC@state.gov",
             "company]": "US Department of Defense",
@@ -18,12 +19,12 @@ keywords = {"name]": "Ben Simmons",
 
 
 def main():
-    txtfile.clear("output.txt")
-    sections = ["introduction"]
-    [sections.append("paragraph_"+str(i+1)) for i in range(num_paragraphs)]
-    sections.append("conclusion")
+    sub_dirs = ["introduction"]
+    [sub_dirs.append("paragraph_"+str(i+1)) for i in range(num_paragraphs)]
+    sub_dirs.append("conclusion")
 
-    txtfile.combine(sections, main_folder, "output.txt", flag, keywords)
+    cover_letter = cldb.DataBase(main_dir, sub_dirs)
+    cover_letter.combine(output_file, flag, keywords)
 
 
 if __name__ == "__main__":
