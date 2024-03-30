@@ -7,7 +7,6 @@ class DataBase:
     def __init__(self, main_dir, sub_dirs):
         self.main_dir = str(main_dir)
         self.sub_dirs = sub_dirs
-        self.init_setup()
         self.output_file = None
         self.flag = None
         self.keywords = None
@@ -55,9 +54,6 @@ class DataBase:
         nested_folder_path = os.path.join(self.main_dir, sub_dir)
         file_path = os.path.join(nested_folder_path, file_name)
         try:
-            if os.path.exists(file_path):
-                print(f"\t\tText file '{file_name}' already exists inside '{nested_folder_path}'.")
-                return 1
             with open(file_path, 'w') as file:
                 if sample:
                     file_written_name = file_name[:-4]
